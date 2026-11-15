@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.first-page{
+    display: flex;
+}
+body{
+    display: flex;
+}
+
+header{
+    background-color: #040b14;
+    width: 20%;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+main >:first-child{
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    background-color: #36abe2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+}
+main >:first-child svg{
+    fill: white;
+
+}
+.close-trigger,
+main>:first-child,
+#menu-trigger{
+    display: none;
+}
+
+
+
+main{
+    margin-left: 20%;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+}
+.first-page{
+    background-image: url(../image/big\ picutre.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 2rem;
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.first-page h1{
+    font-size: 5rem;
+    color: white;
+}
+.right-side p{
+    font-size: xx-large;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: white;
+    text-decoration-color: #149ddd;
+}
+.left-side-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+.left-side-top img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 8px solid #292f37;
+}
+.svg{
+    display: flex;
+    gap: 0.5vw;  
+}
+.svg div > a{
+    background-color: rgba(36, 36, 36, 0.277);
+    padding: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+a{
+    background-color: transparent;
+}
+.svg > div svg{
+    fill:white ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.svg div > a:hover{
+    background-color: #149ddd;
+}
+.left-side-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-left: 1rem;
+}
+.left-side-bottom > div > a{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    color: grey;
+    transition: 0.5s;
+    width: fit-content;
+}
+.left-side-bottom > div > a > p{
+    font-size: large;
+    transition: 0.5s;
+}
+.left-side-bottom > div > a > svg{
+    width:  20px;
+    height: 20px;
+}
+.left-side-bottom > div > a:hover{
+    color: #149ddd;
+}
+.left-side-bottom > div > a > p:hover{
+    color: white;
+}
+.second-page{
+    background-color: white;
+    height:100vh ;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+.top-side{
+    display: flex;
+    flex-direction: column;
+    gap:2rem ;
+}
+
+.top-side h1{
+    color: black;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-color: #149ddd;
+    text-underline-offset: 0.8rem;
+
+}
+
+.top-side > p{
+    font-size: large;
+    line-height: 1.6rem;
+    word-spacing: 0.1rem;
+}
+
+.bottom-side{
+    display: flex;
+    gap: 2rem;
+}
+
+.bottom-side >img{
+    width: 400px;
+}
+
+.bottom-side p {
+    font-size: large;
+}
+
+.information{
+    display: flex;
+    gap: 12rem;
+}
+.right-information,
+.left-information{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.right-information > div,
+.left-information > div{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: large;
+}
+.right-information > div span,
+.left-information > div span{
+    font-weight: bold;
+}     
+
+.second-page svg{
+    fill: #149ddd;
+}
+
+.right-bottom-side{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.italic{
+    font-style: italic
+}
+@media (max-width:440px){
+
+    header{
+        width: 60%;
+        top: 0;
+        left: -100%;
+        transition: 0.5s;
+    }
+    main>:first-child{
+        display: initial;
+    }
+    main{
+    margin-left: 0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    }
+    .first-page{
+        padding: 2rem;
+    }
+    .bottom-side{
+        flex-direction: column;
+    }
+    .bottom-side >img{
+    }
+    .information{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .right-information,
+    .left-information{
+    gap: 1.5rem;
+}
+    #menu-trigger:checked + header{
+        left: 0;
+        transition: 0.5s;
+    }
+     #menu-trigger:checked ~ main .open-trigger{
+        display: none;
+    }
+    #menu-trigger:checked ~ main .close-trigger{
+        display: inline;
+    }
+
+
+
+
+
+    
+
+
+}
+
+
+
+
